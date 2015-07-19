@@ -6,9 +6,6 @@ a {
   text-decoration: none;
   color: #991818;
 }
-a:hover {
-
-}
 p {
   font-size: 50%;
 }
@@ -99,8 +96,9 @@ color:white;
     color: white;
 }
 #page6 {
-    background-color: green;
+    background: rgb(168, 227, 237);
 }
 #page7 {
-  background-color: pink;
+  background-color: black;
+  color: white;
 }

@@ -129,17 +129,3 @@
       /*.group3 .parallax__layer--base {
         background: #3B3737;
       }*/
-      #page1 {
-          background: rgb(168, 227, 237);
-      }
-      #page2 {
-          background: #991818; 
-      }
-      #page3 {
-          background: #000000;
-          margin-bottom: -10em;
-          color:white;
-      }
-      #page4 {
-          background: #F7F7F7;
-      }

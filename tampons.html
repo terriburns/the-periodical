@@ -7,17 +7,17 @@ body {
 }
 
 ellipse {
-  fill: #991818;
+  fill: #fff;
 }
 
 path {
   fill: none;
-  stroke: #991818;
+  stroke: #fff;
   stroke-linecap: round;
 }
 
 .mid {
-  stroke-width: 10px;
+  stroke-width: 12px;
 }
 
 .tail {
@@ -40,8 +40,8 @@ var spermatozoa = d3.range(n).map(function() {
   var x = Math.random() * width,
       y = height;
   return {
-    vx: Math.random() * 2 - 1,
-    vy: Math.random() * 2 - 1,
+    vx: 1,
+    vy: 1,
     path: d3.range(m).map(function() { return [x, y]; }),
     count: 0
   };

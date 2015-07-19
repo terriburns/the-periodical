@@ -136,8 +136,9 @@
           background: #991818; 
       }
       #page3 {
-          background: #C9D1D3;
-          margin-bottom: -7em;
+          background: #000000;
+          margin-bottom: -10em;
+          color:white;
       }
       #page4 {
           background: #F7F7F7;

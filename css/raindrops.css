@@ -2,7 +2,7 @@ html, body {
   background: #CCC;
 }
 
-.ui-layer, #weather-box, #explanation {
+.ui-layer, #weather-box {
   position: absolute;
   height: 100%;
   width: 100%;

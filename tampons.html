@@ -40,8 +40,8 @@ var spermatozoa = d3.range(n).map(function() {
   var x = Math.random() * width,
       y = height;
   return {
-    vx: 1,
-    vy: 1,
+    vx: Math.random() * 2 - 1,
+    vy: Math.random() * 2 - 1,
     path: d3.range(m).map(function() { return [x, y]; }),
     count: 0
   };

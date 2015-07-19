@@ -98,56 +98,29 @@
         font-size: 200%;
       }
 
+      /* centre the content in the parallax layers */
+
+
       /* style the groups
       --------------------------------------------- */
 
-      #group1 {
+      .group1 {
         z-index: 5; /* slide over group 2 */
       }
       #group1 .parallax__layer--base {
-        background: #9DD3DF;
+        background: rgb(102,204,102);
       }
 
-      #group2 {
+      .group2 {
         z-index: 3; /* slide under groups 1 and 3 */
       }
-      #group2 .parallax__layer--back {
+      .group2 .parallax__layer--back {
         background: rgb(123,210,102);
       }
 
-      #group3 {
+      .group3 {
         z-index: 4; /* slide over group 2 and 4 */
       }
-      #group3 .parallax__layer--base {
+      .group3 .parallax__layer--base {
         background: rgb(153,216,101);
-      }
-
-      #group4 {
-      background:rgb(122, 122, 122);
-      z-index: 2; /* slide under group 3 and 5 */
-      }
-      #group4 .parallax__layer--deep {
-        background: rgb(184,223,101);
-      }
-#group5 .parallax__layer--base {
-      background: rgb(214,229,100);
-        }
-        #group6 {
-              z-index: 2; /* slide under group 5 and 7 */
-                }
-                  #group6 .parallax__layer--back {
-                        background: rgb(245,235,100);
-                          }
-
-
-      /* misc
-      --------------------------------------------- */
-      .demo__info {
-        position: absolute;
-        z-index:100;
-        bottom: 1vh;
-        top: auto;
-        font-size:80%;
-        text-align:center;
-        width: 100%;
       }

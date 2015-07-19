@@ -38,12 +38,12 @@ div.red-wave {
 }
 
 ellipse {
-  fill: #fff;
+  fill: #991818;
 }
 
 path {
   fill: none;
-  stroke: #fff;
+  stroke: #991818;
   stroke-linecap: round;
 }
 

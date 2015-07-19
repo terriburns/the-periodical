@@ -129,7 +129,7 @@
         z-index: 4; /* slide over group 2 and 4 */
       }
       #group3 .parallax__layer--base {
-        background: rgb(153,216,101);
+        background: rgb(246, 239, 229);
       }
 
       #group4 {
@@ -173,7 +173,7 @@
 
       /* add-ons 
       --------------------------------------------- */
-      .red-wave {
+      div.red-wave {
         background-color: #991818;
         height: 100%;
         margin-top: -1em;

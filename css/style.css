@@ -3,6 +3,10 @@ h1, h2 {
   font-family: 'Oswald', 'sans-serif';
 }
 
+h5 {
+  font-size: 50%
+}
+
 body {
   font-family: 'Bitter', 'serif';
 }

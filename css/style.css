@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       /* Parallax base styles
       --------------------------------------------- */
 
@@ -184,7 +183,6 @@
         position: fixed;
         top: 0;
       }
-=======
 .all-pages {
   text-align: center;
   position: absolute;
@@ -230,4 +228,3 @@ div.red-wave {
   height: 100%;
   margin-top: -1em;
 }
->>>>>>> f0016ff4e31e351551cb836fdc73b3a79ea76c89

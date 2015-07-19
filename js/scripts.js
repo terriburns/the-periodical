@@ -82,11 +82,11 @@
  *   --------------------------------------------- */
 
 body, html {
-overflow: hidden;
+  overflow: hidden;
 }
 
 body {
-font: 100% / 1.5 Arial;
+  font: 100% / 1.5 Arial;
 }
 
 * {
@@ -107,8 +107,6 @@ font: 100% / 1.5 Arial;
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
-
-
 
     /* style the groups
      *   --------------------------------------------- */
@@ -134,43 +132,15 @@ font: 100% / 1.5 Arial;
       background: rgb(153,216,101);
     }
 
-    #group4 {
-      z-index: 2; /* slide under group 3 and 5 */
-    }
-    #group4 .parallax__layer--back {
-      background: rgb(184,223,101);
-    }
-
-    #group5 {
-      z-index: 3; /* slide over group 4 and 6 */
-    }
-    #group5 .parallax__layer--base {
-      background: rgb(214,229,100);
-    }
-
-    #group6 {
-      z-index: 2; /* slide under group 5 and 7 */
-    }
-    #group6 .parallax__layer--back {
-      background: rgb(245,235,100);
-    }
-
-    #group7 {
-      z-index: 3; /* slide over group 7 */
-    }
-    #group7 .parallax__layer--base {
-      background: rgb(255,241,100);
-    }
-
 
     /* misc
      *   --------------------------------------------- */
-.demo__info {
-position: absolute;
-          z-index:100;
-bottom: 1vh;
-top: auto;
-     font-size:80%;
-     text-align:center;
-width: 100%;
-}
+    .demo__info {
+      position: absolute;
+      z-index:100;
+      bottom: 1vh;
+      top: auto;
+      font-size:80%;
+      text-align:center;
+      width: 100%;
+    }

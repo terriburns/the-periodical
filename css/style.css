@@ -175,5 +175,7 @@
       --------------------------------------------- */
       .red-wave {
         background-color: #eb413a;
+        height: 100%;
+        margin-top: -1em;
       }
 

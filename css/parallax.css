@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       /* Parallax base styles
       --------------------------------------------- */
 
@@ -87,7 +86,7 @@
       }
 
       body {
-        font: 100% / 1.5 Arial;
+       
       }
 
       * {
@@ -100,134 +99,43 @@
       }
 
       /* centre the content in the parallax layers */
-      .title {
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
+
 
       /* style the groups
       --------------------------------------------- */
 
-      #group1 {
+      .group1 {
         z-index: 5; /* slide over group 2 */
       }
-      #group1 .parallax__layer--base {
-        background: rgb(102,204,102);
-      }
+      
+      /*.group1 .parallax__layer--base {
+           background: #9DD3DF;
+      }*/
 
-      #group2 {
+      .group2 {
         z-index: 3; /* slide under groups 1 and 3 */
       }
-      #group2 .parallax__layer--back {
-        background: rgb(246, 239, 230);
-      }
+      /*
+      .group2 .parallax__layer--back {
+        background: #9DD3DF; 
+      } */
 
-      #group3 {
+      .group3 {
         z-index: 4; /* slide over group 2 and 4 */
       }
-      #group3 .parallax__layer--base {
-        background: transparent;
-      }
-
-      #group4 {
-      background:rgb(122, 122, 122);
-      z-index: 2; /* slide under group 3 and 5 */
-      }
-      #group4 .parallax__layer--deep {
-        background: rgb(184,223,101);
-      }
-#group5 .parallax__layer--base {
-      background: rgb(214,229,100);
-        }
-        #group6 {
-              z-index: 2; /* slide under group 5 and 7 */
-                }
-                  #group6 .parallax__layer--back {
-                        background: rgb(245,235,100);
-                          }
-
-
-      /* misc
-      --------------------------------------------- */
-      .demo__info {
-        position: absolute;
-        z-index:100;
-        bottom: 1vh;
-        top: auto;
-        font-size:80%;
-        text-align:center;
-        width: 100%;
-      }
-
-      /* assets 
-      --------------------------------------------- */
       
-      img.wave {
-        width: 100%;
-        height: auto;
-        padding-top: 30px;
+      /*.group3 .parallax__layer--base {
+        background: #3B3737;
+      }*/
+      #page1 {
+          background: #9DD3DF;
       }
-
-      /* add-ons 
-      --------------------------------------------- */
-      div.red-wave {
-        background-color: #991818;
-        height: 100%;
-        margin-top: -1em;
+      #page2 {
+          background: #991818; 
       }
-
-      #reached-top .reached-top {
-        position: fixed;
-        top: 0;
+      #page3 {
+          background: #C9D1D3;
       }
-=======
-.all-pages {
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.newspaper {
-  margin-top: 100px;
-}
-
-ellipse {
-  fill: #fff;
-}
-
-path {
-  fill: none;
-  stroke: #fff;
-  stroke-linecap: round;
-}
-
-.mid {
-  stroke-width: 12px;
-}
-
-.tail {
-  stroke-width: 2px;
-}
-
-      /* assets 
-      --------------------------------------------- */      
-img.wave {
-  width: 100%;
-  height: auto;
-  padding-top: 30px;
-}
-
-/* add-ons 
---------------------------------------------- */
-div.red-wave {
-  background-color: #991818;
-  height: 100%;
-  margin-top: -1em;
-}
->>>>>>> f0016ff4e31e351551cb836fdc73b3a79ea76c89
+      #page4 {
+          background: #F7F7F7;
+      }

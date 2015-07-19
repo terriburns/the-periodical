@@ -27,3 +27,19 @@ path {
 .tail {
   stroke-width: 2px;
 }
+
+      /* assets 
+      --------------------------------------------- */      
+img.wave {
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+}
+
+/* add-ons 
+--------------------------------------------- */
+div.red-wave {
+  background-color: #991818;
+  height: 100%;
+  margin-top: -1em;
+}

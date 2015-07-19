@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,57 +10,69 @@
   </head>
 
   <body>
-
-    <div class="debug">
-      <label><input type="checkbox"> Debug</label>
-    </div>
     <div class="parallax">
-      <div id="group1" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <div class="first-page">
-              <img class="newspaper" width="800" height="800" src="img/newspaper.png"/>
-          </div>
-        </div>
-      </div>
-
+      <!--empty tag for proper formatting-->
       <div id="group2" class="parallax__group">
         <div class="parallax__layer parallax__layer--base">
-          <div class="title">data viz #1</div>
+          <div class="title"></div>
         </div>
         <div class="parallax__layer parallax__layer--back">
-          <div class="title">fact #1</div>
+          <div class="title">Title</div>
         </div>
-     </div>
-    
-     <div id="group3" class="parallax__group">
+      </div>
+      <div id="group3" class="parallax__group">
         <div class="parallax__layer parallax__layer--fore">
-          <div class="title">data viz #2</div>
+          <div class="title"></div>
         </div>
         <div class="parallax__layer parallax__layer--base">
-          <div class="title">fact #2</div>
+
+          <div class="title">Pool of Blood</div>
         </div>
       </div>
      
-      <div id="group4" class="parallax__group">
+      
+      <!--empty tag for proper formatting-->
+      <div id="group2" class="parallax__group">
         <div class="parallax__layer parallax__layer--base">
-          <div class="title">data viz #3</div>
+         <div class="first-page">
+              <img class="newspaper" width="800" height="800" src="img/newspaper.png"/>
+          </div>
         </div>
         <div class="parallax__layer parallax__layer--back">
-          <div class="title">fact #3</div>
+          <div class="title">First fact, ethiopia</div>
+        </div>
       </div>
-    </div>
-  
-    <div id="group5" class="parallax__group">
-          <div class="parallax__layer parallax__layer--fore">
-            <div class="title"></div>
-          </div>
-   </div>
-    </div>
-
+      <div id="group3" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+          <div class="title"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="title">Raining tampons</div>
+        </div>
+      </div>
+      
+      <!--empty tag for proper formatting-->
+      <div id="group2" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="title"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+          <div class="title">Second fact</div>
+        </div>
+      </div>
+      <div id="group3" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+          <div class="title"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="title">*the end*</div>
+        </div>
+      </div>
+      
     <script>
       var debugInput = document.querySelector("input");
       function updateDebugState() {
-        document.body.classList.toggle('debug-on', debugInput.checked);
+      document.body.classList.toggle('debug-on', debugInput.checked);
       }
       debugInput.addEventListener("click", updateDebugState);
       updateDebugState();

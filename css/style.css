@@ -54,6 +54,10 @@ path {
 .tail {
   stroke-width: 2px;
 }
+
+.black {
+  background: #000000;
+}
 #page1 {
     background: rgb(168, 227, 237);
 }
@@ -67,4 +71,9 @@ color:white;
 }
 #page4 {
     background: #F7F7F7;
+}
+.blood-text {
+  padding: 5em 5em;
+  text-align: center;
+  color: white;
 }

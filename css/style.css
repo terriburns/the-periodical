@@ -95,3 +95,20 @@ color:white;
 #page7 {
   background-color: pink;
 }
+.white {
+  color: white;
+}
+.pads {
+  float: left;
+  width: 500px;
+  height: auto;
+  position: relative;
+  margin: -15em 0em 0em -21em;
+}
+.pantyliners {
+  float: right;
+  width: 500px;
+  height: auto;
+  position: relative;
+  margin: 0em -21em -15em 0em;
+}

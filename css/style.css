@@ -103,7 +103,6 @@ color:white;
   background-color: black;
   color: white;
 }
-<<<<<<< HEAD
 .white {
   color: white;
 }
@@ -112,20 +111,18 @@ color:white;
   width: 500px;
   height: auto;
   position: relative;
-  margin: -15em 0em 0em -21em;
+  margin: -20em 0em 0em -26em;
 }
 .pantyliners {
   float: right;
   width: 500px;
   height: auto;
   position: relative;
-  margin: 0em -21em -15em 0em;
-=======
+  margin: 0em -26em -20em 0em;
 .cup {
   display: block;
   position: relative;
   top: 350px;
   left: 38%;
   right: 38%;
->>>>>>> c179b2c9c256194914c91c23bc347e1382d7e8b9
 }

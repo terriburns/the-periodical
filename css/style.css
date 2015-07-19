@@ -122,7 +122,7 @@
         z-index: 3; /* slide under groups 1 and 3 */
       }
       #group2 .parallax__layer--back {
-        background: rgb(123,210,102);
+        background: rgb(246, 239, 230);
       }
 
       #group3 {
@@ -161,3 +161,19 @@
         text-align:center;
         width: 100%;
       }
+
+      /* assets 
+      --------------------------------------------- */
+      
+      img.wave {
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+      }
+
+      /* add-ons 
+      --------------------------------------------- */
+      .red-wave {
+        background-color: #eb413a;
+      }
+

@@ -42,6 +42,7 @@ div.red-wave {
   top: 0;
 }
 .all-pages {
+  font-size: 25px;
   text-align: center;
   position: absolute;
   left: 50%;
@@ -102,6 +103,7 @@ color:white;
   background-color: black;
   color: white;
 }
+<<<<<<< HEAD
 .white {
   color: white;
 }
@@ -118,4 +120,12 @@ color:white;
   height: auto;
   position: relative;
   margin: 0em -21em -15em 0em;
+=======
+.cup {
+  display: block;
+  position: relative;
+  top: 350px;
+  left: 38%;
+  right: 38%;
+>>>>>>> c179b2c9c256194914c91c23bc347e1382d7e8b9
 }

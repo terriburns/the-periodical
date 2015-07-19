@@ -9,3 +9,21 @@
 .newspaper {
   margin-top: 100px;
 }
+
+ellipse {
+  fill: #fff;
+}
+
+path {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+}
+
+.mid {
+  stroke-width: 12px;
+}
+
+.tail {
+  stroke-width: 2px;
+}

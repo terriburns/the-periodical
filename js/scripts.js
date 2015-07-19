@@ -1,146 +1,78 @@
-/* Parallax base styles
- *   --------------------------------------------- */
+var width = screen.width,
+    height = screen.height;
 
-.parallax {
-  height: 500px; /* fallback for older browsers */
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-}
+var n = 50,
+    m = 12,
+    degrees = 180 / Math.PI;
 
-.parallax__group {
-  position: relative;
-  height: 500px; /* fallback for older browsers */
-  height: 100vh;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
+var spermatozoa = d3.range(n).map(function() {
+  var x = Math.random() * width,
+      y = height;
+  return {
+    vx: Math.random() * 2 - 1,
+    vy: Math.random() * 2 - 1,
+    path: d3.range(m).map(function() { return [x, y]; }),
+    count: 0
+  };
+});
 
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
 
-.parallax__layer--fore {
-  -webkit-transform: translateZ(90px) scale(.7);
-  transform: translateZ(90px) scale(.7);
-  z-index: 1;
-}
+var g = svg.selectAll("g")
+    .data(spermatozoa)
+  .enter().append("g");
 
-.parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  z-index: 4;
-}
+var head = g.append("ellipse")
+    .attr("rx", 6.5)
+    .attr("ry", 4);
 
-.parallax__layer--back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
-  z-index: 3;
-}
+g.append("path")
+    .datum(function(d) { return d.path.slice(0, 3); })
+    .attr("class", "mid");
 
-.parallax__layer--deep {
-  -webkit-transform: translateZ(-600px) scale(3);
-  transform: translateZ(-600px) scale(3);
-  z-index: 2;
-}
+g.append("path")
+    .datum(function(d) { return d.path; })
+    .attr("class", "tail");
 
+var tail = g.selectAll("path");
 
-/* Debugger styles - used to show the effect
- *   --------------------------------------------- */
+d3.timer(function() {
+  for (var i = -1; ++i < n;) {
+    var spermatozoon = spermatozoa[i],
+        path = spermatozoon.path,
+        dx = spermatozoon.vx,
+        dy = spermatozoon.vy,
+        x = path[0][0] += dx,
+        y = path[0][1] += dy,
+        speed = Math.sqrt(dx * dx + dy * dy),
+        count = speed * 10,
+        k1 = -5 - speed / 3;
 
-.debug {
-  position: fixed;
-  top: 0;
-  left: .5em;
-  z-index: 999;
-  background: rgba(0,0,0,.85);
-  color: #fff;
-  padding: .5em;
-  border-radius: 0 0 5px 5px;
-}
-.debug-on .parallax__group {
-  -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-  transform: translate3d(700px, 0, -800px) rotateY(30deg);
-}
-.debug-on .parallax__layer {
-  box-shadow: 0 0 0 2px #000;
-  opacity: 0.9;
-}
-.parallax__group {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-}
+    // Bounce off the walls.
+    if (x < 0 || x > width) spermatozoon.vx *= -1;
+    if (y < 0 || y > height) spermatozoon.vy *= -1;
 
-
-/* demo styles
- *   --------------------------------------------- */
-
-body, html {
-  overflow: hidden;
-}
-
-body {
-  font: 100% / 1.5 Arial;
-}
-
-* {
-  *     margin:0;
-  *         padding:0;
-  *           }
-  *
-  *             .parallax {
-    *                 font-size: 200%;
-    *                   }
-    *
-    *                      /* centre the content in the parallax layers */
-    .title {
-      text-align: center;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+    // Swim!
+    for (var j = 0; ++j < m;) {
+      var vx = x - path[j][0],
+          vy = y - path[j][1],
+          k2 = Math.sin(((spermatozoon.count += count) + j * 3) / 300) / speed;
+      path[j][0] = (x += dx / speed * k1) - dy * k2;
+      path[j][1] = (y += dy / speed * k1) + dx * k2;
+      speed = Math.sqrt((dx = vx) * dx + (dy = vy) * dy);
     }
+  }
 
-    /* style the groups
-     *   --------------------------------------------- */
+  head.attr("transform", headTransform);
+  tail.attr("d", tailPath);
+});
 
-    #group1 {
-      z-index: 5; /* slide over group 2 */
-    }
-    #group1 .parallax__layer--base {
-      background: rgb(102,204,102);
-    }
+function headTransform(d) {
+  return "translate(" + d.path[0] + ")rotate(" + Math.atan2(d.vy, d.vx) * degrees + ")";
+}
 
-    #group2 {
-      z-index: 3; /* slide under groups 1 and 3 */
-    }
-    #group2 .parallax__layer--back {
-      background: rgb(123,210,102);
-    }
-
-    #group3 {
-      z-index: 4; /* slide over group 2 and 4 */
-    }
-    #group3 .parallax__layer--base {
-      background: rgb(153,216,101);
-    }
-
-
-    /* misc
-     *   --------------------------------------------- */
-    .demo__info {
-      position: absolute;
-      z-index:100;
-      bottom: 1vh;
-      top: auto;
-      font-size:80%;
-      text-align:center;
-      width: 100%;
-    }
+function tailPath(d) {
+  return "M" + d.join("L");
+}

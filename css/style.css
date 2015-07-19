@@ -54,4 +54,16 @@ path {
 .tail {
   stroke-width: 2px;
 }
-
+#page1 {
+    background: rgb(168, 227, 237);
+}
+#page2 {
+    background: #991818; 
+}
+#page3 {
+    background: #C9D1D3;
+    margin-bottom: -7em;
+}
+#page4 {
+    background: #F7F7F7;
+}

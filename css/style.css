@@ -129,7 +129,7 @@
         z-index: 4; /* slide over group 2 and 4 */
       }
       #group3 .parallax__layer--base {
-        background: rgb(246, 239, 229);
+        background: transparent;
       }
 
       #group4 {
@@ -179,3 +179,7 @@
         margin-top: -1em;
       }
 
+      #reached-top .reached-top {
+        position: fixed;
+        top: 0;
+      }

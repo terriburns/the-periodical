@@ -1,45 +1,77 @@
-<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-<script src="js/datamaps.world.min.js"></script>
-<div class="map" id="bubbles" style="position: relative; width: 100%; height: 80%"></div>
-<script>
-      var bubble_map = new Datamap({
-        element: document.getElementById("bubbles"),
-        geographyConfig: {
-          popupOnHover: false,
-          highlightOnHover: false
-        },
-        fills: {
-          defaultFill: '#ABDDA4',
-          USA: 'blue',
-          RUS: 'red'
-        }
-      });
-      bubble_map.bubbles([
-        {
-          name: 'Castle Bravo',
-          radius: 25,
-          yeild: 15000,
-          country: 'USA',
-          significance: 'First dry fusion fuel "staged" thermonuclear weapon; a serious nuclear fallout accident occurred',
-          fillKey: 'USA',
-          date: '1954-03-01',
-          latitude: 11.415,
-          longitude: 165.1619
-        },{
-          name: 'Tsar Bomba',
-          radius: 70,
-          yeild: 50000,
-          country: 'USSR',
-          fillKey: 'RUS',
-          significance: 'Largest thermonuclear weapon ever tested—scaled down from its initial 100 Mt design by 50%',
-          date: '1961-10-31',
-          latitude: 73.482,
-          longitude: 54.5854
-        }
-      ], {
-        popupTemplate: function(geo, data) {
-          return '<div class="hoverinfo"><strong>Yield:</strong>' + data.yeild + '<br/>Exploded on ' + data.date + ' by the'  + data.country + '</div>'
-        }
-      });
-</script>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>A grouped pure CSS parallax demo by Keith Clark</title>
+    <link rel ="stylesheet" type "text/css" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="debug">
+      <label><input type="checkbox"> Debug</label>
+    </div>
+
+    <div class="parallax">
+      <div id="group1" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="title">THE PERIODICAL</div>
+        </div>
+      </div>
+
+      <div id="group2" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="title">data viz #1</div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+          <div class="title">fact #1</div>
+        </div>
+     </div>
+    
+     <div id="group3" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+          <div class="title">data viz #2</div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="title">fact #2</div>
+        </div>
+      </div>
+     
+      <div id="group4" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="title">data viz #3</div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+          <div class="title">fact #3</div>
+      </div>
+    </div>
+  
+    <div id="group5" class="parallax__group">
+          <div class="parallax__layer parallax__layer--fore">
+            <div class="title"></div>
+          </div>
+   </div>
+    </div>
+
+    <script>
+      var debugInput = document.querySelector("input");
+      function updateDebugState() {
+        document.body.classList.toggle('debug-on', debugInput.checked);
+      }
+      debugInput.addEventListener("click", updateDebugState);
+      updateDebugState();
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-10812217-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>

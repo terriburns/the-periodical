@@ -103,6 +103,22 @@ color:white;
   background-color: black;
   color: white;
 }
+.white {
+  color: white;
+}
+.pads {
+  float: left;
+  width: 500px;
+  height: auto;
+  position: relative;
+  margin: -20em 0em 0em -26em;
+}
+.pantyliners {
+  float: right;
+  width: 500px;
+  height: auto;
+  position: relative;
+  margin: 0em -26em -20em 0em;
 .cup {
   display: block;
   position: relative;
